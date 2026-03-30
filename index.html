@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邀请函</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* 防止在超大屏幕上过度拉伸 */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* 邀请函画布样式 */
+        #invitation-canvas {
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 10px solid #d4af37; /* 金色边框装饰 */
+            width: 100%; /* 宽度占满容器 */
+            max-width: 1754px; /* 最大宽度为您指定的大图尺寸 */
+            height: auto; /* 高度根据宽度自动调整，保持原始比例 */
+        }
+
+        #background-image {
+            width: 100%;
+            height: auto; /* 保持图片的原始宽高比 */
+            display: block;
+        }
+
+        .gif-element {
+            position: absolute;
+            pointer-events: none; /* 不拦截鼠标事件 */
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            #invitation-canvas {
+                max-width: 95vw; /* 在小屏幕上，使用视口宽度的95% */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 主邀请函画布 -->
+<div class="container">
+    <div id="invitation-canvas">
+        <!-- 背景图，请在此处替换您的图片路径 -->
+        <img id="background-image" src="images/0011.png" alt="邀请函背景图">
+        
+        <!-- GIF 动画元素 (请在此处修改GIF的位置和尺寸) -->
+        <img class="gif-element" id="gif-1" src="images/0012.gif" style="left: 263px; top: 248px; width: 80px;">
+        <img class="gif-element" id="gif-2" src="images/0012.gif" style="left: 1403px; top: 186px; width: 60px;">
+        <img class="gif-element" id="gif-3" src="images/0012.gif" style="left: 877px; top: 744px; width: 100px;">
+        <img class="gif-element" id="gif-4" src="images/0012.gif" style="left: 351px; top: 927px; width: 70px;">
+        <img class="gif-element" id="gif-5" src="images/0012.gif" style="left: 1316px; top: 868px; width: 90px;">
+        <img class="gif-element" id="gif-6" src="images/0012.gif" style="left: 789px; top: 310px; width: 50px;">
+    </div>
+</div>
+
+</body>
+</html>
